@@ -4,11 +4,12 @@
 
 //PUT YOUR NAME AND WHAT YOU'RE WORKING ON HERE
 //Mike
-//-Convert Game and Player to horizontal single-paddle game
+//-Work on math
 
 //Sean
 
 //Brendan
+
 
 //PROBLEMS
 //-Previous code is vertical, for two paddles
