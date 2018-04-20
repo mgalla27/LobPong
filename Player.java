@@ -35,6 +35,10 @@ public class Player {
 	public int getY_pos() {
 		return y_pos;
 	}
+	
+	public void setX_pos(int x_pos) {
+		this.x_pos = x_pos;
+	}
 
 	public void setY_pos(int y_pos) {
 		this.y_pos = y_pos;
