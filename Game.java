@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 
 public class Game extends JComponent implements KeyListener, ActionListener{
 
-	public Player p1, p2;
+	public Player p1;
 	public static JFrame frame; 
 	public int paddle_lenght = 90;
 	
@@ -24,12 +24,11 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 	
 	public Game() {
 		JLabel p1_score = new JLabel("P1 score");
-		JLabel p2_score = new JLabel("P2 score");
+		
 		
 		// PLayer 1
-		p1 = new Player(40, frame.getHeight()/2);
-		// Player 2
-		p2 = new Player(frame.getWidth()-80, frame.getHeight()/2);
+		p1 = new Player(frame.getWidth()/2, 40);
+		
 		
 		frame.addKeyListener(this);
 		frame.setFocusable(true);
@@ -44,7 +43,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 		super.paintComponent(g);
 		// paddles
 		g.fillRect(p1.getX_pos(), p1.getY_pos(), 20, paddle_lenght);
-		g.fillRect(p2.getX_pos(), p2.getY_pos(), 20, paddle_lenght);
+		
 		// ball
 		g.fillOval(ball_x, ball_y, ball_size, ball_size);
 	}
