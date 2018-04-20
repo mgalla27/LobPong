@@ -50,7 +50,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 	
 	
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
+	public void actionPerformed(ActionEvent e) {
 		if(ball_goes_right == true) {
 			ball_x = ball_x + 10;
 			//top part
@@ -80,12 +80,12 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 
-	    if (key == KeyEvent.VK_Left) {
+	    if (key == KeyEvent.VK_LEFT) {
 	    	if((p1.getX_pos() >= 0)) {
 	    		p1.setX_pos(p1.getX_pos() - 10);
 	    	}
 	    }
-	    else if (key == KeyEvent.VK_Right) {
+	    else if (key == KeyEvent.VK_RIGHT) {
 	    	if((p1.getX_pos() < getWidth() - paddle_lenght)) {
 	    		p1.setX_pos(p1.getX_pos() + 10);
 	    	}
@@ -96,14 +96,14 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 
 
 	@Override
-	public void keyReleased(KeyEvent arg0) {
+	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
 
 	@Override
-	public void keyTyped(KeyEvent arg0) {
+	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
