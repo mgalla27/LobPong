@@ -80,25 +80,14 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 
-	    if (key == KeyEvent.VK_UP) {
-	    	if((p1.getY_pos() >= 0)) {
-	    		p1.setY_pos(p1.getY_pos() - 10);
+	    if (key == KeyEvent.VK_Left) {
+	    	if((p1.getX_pos() >= 0)) {
+	    		p1.setX_pos(p1.getX_pos() - 10);
 	    	}
 	    }
-	    else if (key == KeyEvent.VK_DOWN) {
-	    	if((p1.getY_pos() < getHeight() - paddle_lenght)) {
-	    		p1.setY_pos(p1.getY_pos() + 10);
-	    	}
-	    }
-	    else if (key == KeyEvent.VK_W) {
-	    	if((p2.getY_pos() >= 0) ) {
-	    		p2.setY_pos(p2.getY_pos() - 10);
-	    	}
-	    	
-	    }
-	    else if (key == KeyEvent.VK_S) {
-	    	if((p2.getY_pos() < getHeight() - paddle_lenght)) {
-	    		p2.setY_pos(p2.getY_pos() + 10);
+	    else if (key == KeyEvent.VK_Right) {
+	    	if((p1.getX_pos() < getWidth() - paddle_lenght)) {
+	    		p1.setX_pos(p1.getX_pos() + 10);
 	    	}
 	    }
 	    
