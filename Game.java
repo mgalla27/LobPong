@@ -13,7 +13,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 
 	public Player p1;
 	public static JFrame frame; 
-	public int paddle_lenght = 90;
+	public int paddle_length = 90;
 	
 	public int ball_size = 25;
 	public int ball_x = 500;
@@ -42,7 +42,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		// paddles
-		g.fillRect(p1.getX_pos(), p1.getY_pos(), 20, paddle_lenght);
+		g.fillRect(p1.getX_pos(), p1.getY_pos(), 20, paddle_length);
 		
 		// ball
 		g.fillOval(ball_x, ball_y, ball_size, ball_size);
@@ -57,7 +57,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 				//ball_y position
 			// bottom part 
 			// center
-			if (ball_x >= p2.getX_pos() && ball_y>= p2.getY_pos() && ball_y <= p2.getY_pos() + paddle_lenght) {
+			if (ball_x >= p2.getX_pos() && ball_y>= p2.getY_pos() && ball_y <= p2.getY_pos() + paddle_length) {
 				ball_x = ball_x - 10;
 				ball_goes_right = false;
 			}
@@ -65,7 +65,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 		else {
 			ball_x = ball_x - 10;
 			
-			if (ball_x <= p1.getX_pos() && ball_y>= p1.getY_pos() && ball_y <= p1.getY_pos() + paddle_lenght) {
+			if (ball_x <= p1.getX_pos() && ball_y>= p1.getY_pos() && ball_y <= p1.getY_pos() + paddle_length) {
 				ball_x = ball_x + 10;
 				ball_goes_right = true;
 			}
@@ -86,7 +86,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 	    	}
 	    }
 	    else if (key == KeyEvent.VK_RIGHT) {
-	    	if((p1.getX_pos() < getWidth() - paddle_lenght)) {
+	    	if((p1.getX_pos() < getWidth() - paddle_length)) {
 	    		p1.setX_pos(p1.getX_pos() + 10);
 	    	}
 	    }
