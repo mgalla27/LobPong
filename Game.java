@@ -14,7 +14,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 	public Player p1;
 	public static JFrame frame; 
 	public int paddle_length = 90;
-	Random rand = new Random();
+	
 	
 	public int ball_size = 25;
 	public int ball_x = 500;
