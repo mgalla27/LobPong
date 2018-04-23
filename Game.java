@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.Timer;
-
+import java.util.Random;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -14,6 +14,7 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 	public Player p1;
 	public static JFrame frame; 
 	public int paddle_length = 90;
+	Random rand = new Random();
 	
 	public int ball_size = 25;
 	public int ball_x = 500;
@@ -46,6 +47,9 @@ public class Game extends JComponent implements KeyListener, ActionListener{
 		
 		// ball
 		g.fillOval(ball_x, ball_y, ball_size, ball_size);
+		
+		//designs
+		
 	}
 	
 	
